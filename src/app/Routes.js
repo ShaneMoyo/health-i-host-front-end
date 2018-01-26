@@ -5,7 +5,7 @@ import {
   Redirect
 } from 'react-router-dom';
 import PrivateRoute from './PrivateRoute';
-import Landing from 'components/landing/Landing';
+import Landing from '../components/landing/Landing';
 
 export default () => (
   <Switch> 

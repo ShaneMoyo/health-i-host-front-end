@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import Routes from './Routes';
 import { connect } from 'react-redux';
+import { BrowserRouter as Router } from 'react-router-dom';
+import '../style/mystyle.css';
+import './app.css';
 
 class App extends Component {
   render() {
@@ -22,7 +25,7 @@ class App extends Component {
 }
 
 export default connect(({ auth }) => ({
-  error: auth.error
+ 
 }),
 null
 )(App);
