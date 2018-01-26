@@ -4,6 +4,7 @@ import {
   Switch,
   Redirect
 } from 'react-router-dom';
+import PrivateRoute from './PrivateRoute';
 
 export default () => (
   <Switch> 
