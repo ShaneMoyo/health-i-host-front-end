@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { signout } from '../auth/actions';
 
 const NavBarLink = props => <NavLink {...props} 
 className="nav-link" 
@@ -32,9 +33,9 @@ class Navigation extends Component {
             <NavBarLink exact to="/"><span class="tag is-outlined">Healthihost</span></NavBarLink>
           </a>
           
-          {user && <a class="navbar-item is-transparent">
-              Hello, ${user.firstName}
-          </a>}
+          {user ? <a class="navbar-item is-transparent">
+              {`Hello, ${user.firstName}`}
+          </a> : null}
 
           <span class={isActive ? "navbar-burger burger is-active" : "navbar-burger burger"} data-target="navbarMenu" onClick={() => this.onClickNav()}>
             <span></span>
@@ -46,7 +47,7 @@ class Navigation extends Component {
         <div class={ isActive ? "animated fadeIn navbar-menu is-active is-success" : "animated fadeIn navbar-menu"}>
           <div class="navbar-end">
             <a class="navbar-item is-transparent">
-              <NavBarLink exact to="/login" onClick={() => this.onClickNav()}><span  class="tag is-warning">Log in</span></NavBarLink>
+              <NavBarLink exact to="/auth/signin" onClick={() => this.onClickNav()}><span  class="tag is-warning">Log in</span></NavBarLink>
             </a>
             <a class="navbar-item is-transparent">
               <NavBarLink exact to="/massage" onClick={() => this.onClickNav()}><span class="tag is-warning">Massage Therapy</span></NavBarLink>
@@ -68,6 +69,6 @@ class Navigation extends Component {
 }
 
 export default connect(({ auth }) => ({
-  
-}), null
+  user: auth.user
+}), { signout }
 )(Navigation);

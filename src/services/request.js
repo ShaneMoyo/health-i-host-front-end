@@ -22,7 +22,6 @@ const wrap = cmd => cmd
   .then(
     r => r.body,
     ({ response }) => {
-      console.log('tokeeennnn', token)
       const { body, text } = response;
       const error = body ? body.message || body.error || body : text;
       throw error;
