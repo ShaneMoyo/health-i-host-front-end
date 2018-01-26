@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Navigation from '../components/navigation/Navigation';
+import Footer from '../components/footer/Footer';
 import Routes from './Routes';
 import { connect } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -21,6 +22,7 @@ class App extends Component {
           </head>
           <Navigation/>
           <Routes class="viewbox"/>
+          <Footer/>
         </div>
       </Router>
     );
