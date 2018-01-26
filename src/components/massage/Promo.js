@@ -15,10 +15,10 @@ class Promo extends Component {
           <div class="container">
           <br/>
           <br/>
-            <h1 class="title">
+            <h1 class="animated fadeIn title">
               Massage Therapy
             </h1>
-            <h2 class="subtitle">
+            <h2 class="animated fadeIn subtitle">
               A natural, effective way to relieve stress and reduce pain and inflammation.
             </h2>
             <div class="field">

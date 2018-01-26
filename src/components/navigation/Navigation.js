@@ -46,10 +46,10 @@ class Navigation extends Component {
         <div class={ isActive ? "animated fadeIn navbar-menu is-active is-success" : "animated fadeIn navbar-menu"}>
           <div class="navbar-end">
             <a class="navbar-item is-transparent">
-              <NavBarLink exact to="/login"><span class="tag is-warning">Log in</span></NavBarLink>
+              <NavBarLink exact to="/login" onClick={() => this.onClickNav()}><span  class="tag is-warning">Log in</span></NavBarLink>
             </a>
             <a class="navbar-item is-transparent">
-              <NavBarLink exact to="/massage"><span class="tag is-warning">Massage Therapy</span></NavBarLink>
+              <NavBarLink exact to="/massage" onClick={() => this.onClickNav()}><span class="tag is-warning">Massage Therapy</span></NavBarLink>
             </a>
             
             
