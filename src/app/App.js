@@ -20,7 +20,7 @@ class App extends Component {
             <title>HealthiHost</title>
           </head>
           <Navigation/>
-          <Routes/>
+          <Routes class="viewbox"/>
         </div>
       </Router>
     );
