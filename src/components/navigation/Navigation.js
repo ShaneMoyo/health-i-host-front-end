@@ -29,6 +29,7 @@ class Navigation extends Component {
       <nav class="navbar">
       <div class="container is-fluid">
         <div class="navbar-brand">
+
           <a class="navbar-item">
             <NavBarLink exact to="/"><span class="tag is-outlined">Healthihost</span></NavBarLink>
           </a>
@@ -42,17 +43,19 @@ class Navigation extends Component {
             <span></span>
             <span></span>
           </span>
+          
         </div>
 
         <div class={ isActive ? "animated fadeIn navbar-menu is-active is-success" : "animated fadeIn navbar-menu"}>
           <div class="navbar-end">
-            <a class="navbar-item is-transparent">
+
+            {!user && <a class="navbar-item is-transparent">
               <NavBarLink exact to="/auth/signin" onClick={() => this.onClickNav()}><span  class="tag is-warning">Log in</span></NavBarLink>
-            </a>
+            </a>}
+
             <a class="navbar-item is-transparent">
               <NavBarLink exact to="/massage" onClick={() => this.onClickNav()}><span class="tag is-warning">Massage Therapy</span></NavBarLink>
             </a>
-            
             
             { user && <a class="navbar-item" onClick={() => this.handleSignOut()}>
             <NavBarLink exact to="/"><span class="tag is-warning">Log out</span></NavBarLink>
