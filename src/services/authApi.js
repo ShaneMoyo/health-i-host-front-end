@@ -1,16 +1,17 @@
 import { request } from './request';
 
-export default {
-  verify() {
+export default { 
+  verify(){
     return request.get('/auth/verify');
   },
-  signin(credentials) {
+  signin(credentials){
     return request.post('/auth/signin', credentials);
   },
-  signup(user) {
-    return request.post('/auth/signup', user);
+  signup(credentials){
+    return request.post('/auth', credentials);
   },
-  getUser() {
-    return request.get('/me');
+  getUser(id){
+    const path = id ? `/users/${id}` : '/users/me';
+    return request.get(path);
   }
 };

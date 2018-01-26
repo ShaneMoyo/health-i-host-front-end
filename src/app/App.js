@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Navigation from '../components/navigation/Navigation';
 import Footer from '../components/footer/Footer';
 import Routes from './Routes';
+import { checkForToken } from '../components/auth/actions';
 import { connect } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import '../style/mystyle.css';
@@ -9,6 +10,11 @@ import './app.css';
 
 
 class App extends Component {
+
+  componentDidMount() {
+    this.props.checkForToken();
+  }
+
   render() {
     return (
       <Router>
@@ -30,7 +36,7 @@ class App extends Component {
 }
 
 export default connect(({ auth }) => ({
- 
+  error: auth.error
 }),
-null
+{ checkForToken }
 )(App);

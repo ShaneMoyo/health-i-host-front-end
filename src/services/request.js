@@ -1,4 +1,4 @@
-import store from '../store/index';
+import store from '../store/store';
 import superagent from 'superagent';
 
 let token = '';
@@ -22,6 +22,7 @@ const wrap = cmd => cmd
   .then(
     r => r.body,
     ({ response }) => {
+      console.log('tokeeennnn', token)
       const { body, text } = response;
       const error = body ? body.message || body.error || body : text;
       throw error;

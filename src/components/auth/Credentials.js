@@ -5,10 +5,17 @@ export default ({ submit, action, allowName = false }) => (
   <form onSubmit={e => {
     e.preventDefault();
     const { elements } = e.target;
-    const data = Object.keys(elements).reduce((obj, key) => {
-      obj[key] = elements[key].value;
-      return obj;
-    }, {});
+    const data = action === 'Sign Up' ? 
+    { 
+      email: elements.email.value,
+      password: elements.password.value,
+      firstName: elements.firstName.value,
+      lastName: elements.lastName.value,
+    } : {
+      email: elements.email.value,
+      password: elements.password.value
+    };
+    console.log('data', data)
     submit(data);
   }}>
     { allowName && <label>First Name: <input name="firstName"/></label> }

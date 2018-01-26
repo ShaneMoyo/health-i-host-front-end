@@ -8,12 +8,14 @@ import PrivateRoute from './PrivateRoute';
 import Landing from '../components/landing/Landing';
 import Massage from '../components/massage/Massage';
 import Appointment from '../components/appointments/Appointment';
+import Auth from '../components/auth/Auth';
 
 export default () => (
   <Switch> 
     <Route exact path="/" render={() => <Landing/>}/>;
+    <Route path="/auth" render={() => <Auth/>}/>
     <Route exact path="/massage" render={() => <Massage/>}/>;
-    <Route exact path="/appointment" render={() => <Appointment/>}/>;
+    <PrivateRoute exact path="/appointment" render={() => <Appointment/>}/>;
     <Redirect to="/"/>
   </Switch>  
 );

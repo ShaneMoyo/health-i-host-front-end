@@ -1,5 +1,9 @@
 import { combineReducers } from 'redux';
-import Auth from '../components/auth/reducer';
+import auth from '../components/auth/reducer';
+import { error, loading } from '../services/reducer';
+
 export default combineReducers({
-  Auth
+  auth,
+  loading,
+  error
 });
