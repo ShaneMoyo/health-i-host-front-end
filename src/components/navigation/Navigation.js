@@ -49,7 +49,7 @@ class Navigation extends Component {
               <NavBarLink exact to="/login"><span class="tag is-warning">Log in</span></NavBarLink>
             </a>
             <a class="navbar-item is-transparent">
-              <NavBarLink exact to="/massage"><span class="tag is-warning">Massage</span></NavBarLink>
+              <NavBarLink exact to="/massage"><span class="tag is-warning">Massage Therapy</span></NavBarLink>
             </a>
             
             

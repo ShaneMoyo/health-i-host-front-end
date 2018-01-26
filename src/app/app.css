@@ -35,7 +35,7 @@ p {
 .hero.is-info {
   background: linear-gradient(
       rgba(255, 255, 255, 0.6),
-      rgba(188, 12, 204, 0.1)
+      rgba(124, 101, 8, 0.1)
     ), url('../utils/images/background3.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
