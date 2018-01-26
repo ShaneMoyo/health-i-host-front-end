@@ -58,7 +58,7 @@ p {
 
 .navbar{
   border-style: solid;
-  border-width: 0px 0px 2px 0px;
+  border-width: 0px 0px 1px 0px;
   border-color: hsl(48, 100%, 67%)
 }
 .navbar-menu{

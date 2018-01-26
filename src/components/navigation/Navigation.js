@@ -29,7 +29,7 @@ class Navigation extends Component {
       <div class="container is-fluid">
         <div class="navbar-brand">
           <a class="navbar-item">
-            <NavBarLink exact to="/"><span class="tag is-light">Healthihost</span></NavBarLink>
+            <NavBarLink exact to="/"><span class="tag is-outlined">Healthihost</span></NavBarLink>
           </a>
           
           {user && <a class="navbar-item is-transparent">
