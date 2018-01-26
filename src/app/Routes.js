@@ -5,10 +5,11 @@ import {
   Redirect
 } from 'react-router-dom';
 import PrivateRoute from './PrivateRoute';
+import Landing from 'components/landing/Landing';
 
 export default () => (
   <Switch> 
-    <Route exact path="/" render={() => <App/>}/>;
+    <Route exact path="/" render={() => <Landing/>}/>;
     <Redirect to="/"/>
   </Switch>  
 );
