@@ -10,9 +10,9 @@ html,body {
 
 .hero.is-info, login {
   background: linear-gradient(
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.3)
-    ), url('') no-repeat center center fixed;
+      rgba(195, 22, 211, 0.3),
+      rgba(255, 255, 255, 0.3)
+    ), url('../utils/images/background.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
