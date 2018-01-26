@@ -22,34 +22,39 @@ class Navigation extends Component {
 
   render() {
     const { user } = this.props;
+    const { isActive} = this.state;
     return (
       <div class="hero-head">
       <nav class="navbar">
       <div class="container is-fluid">
         <div class="navbar-brand">
           <a class="navbar-item">
-            <NavBarLink exact to="/">HealthiHost</NavBarLink>
+            <NavBarLink exact to="/"><span class="tag is-light">Healthihost</span></NavBarLink>
           </a>
           
-          <a class="navbar-item is-transparent">
-              { user ? `Hello, ${user.firstName}`: <NavBarLink class="animated fadeIn button is-outlined is-success" exact to="/login">Log In</NavBarLink>}
-          </a> 
+          {user && <a class="navbar-item is-transparent">
+              Hello, ${user.firstName}
+          </a>}
 
-          <span class="navbar-burger burger" data-target="navbarMenu" onClick={() => this.onClickNav()}>
+          <span class={isActive ? "navbar-burger burger is-active" : "navbar-burger burger"} data-target="navbarMenu" onClick={() => this.onClickNav()}>
             <span></span>
             <span></span>
             <span></span>
           </span>
         </div>
 
-        <div class={ this.state.isActive ? "animated fadeIn navbar-menu is-active" : "navbar-menu"}>
+        <div class={ isActive ? "animated fadeIn navbar-menu is-active is-success" : "animated fadeIn navbar-menu"}>
           <div class="navbar-end">
             <a class="navbar-item is-transparent">
-              <NavBarLink exact to="/massage">Massage</NavBarLink>
+              <NavBarLink exact to="/login"><span class="tag is-warning">Log in</span></NavBarLink>
+            </a>
+            <a class="navbar-item is-transparent">
+              <NavBarLink exact to="/massage"><span class="tag is-warning">Massage</span></NavBarLink>
             </a>
             
+            
             { user && <a class="navbar-item" onClick={() => this.handleSignOut()}>
-            <NavBarLink exact to="/">Log out</NavBarLink>
+            <NavBarLink exact to="/"><span class="tag is-warning">Log out</span></NavBarLink>
             </a> }
           </div>
         </div>
