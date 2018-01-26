@@ -1,4 +1,4 @@
-import * as actions from './constants';
+import * as actions from '../../utils/constants';
 import { combineReducers } from 'redux';
 
 export default (state = {}, action) => combineReducers({ user, token, error, checkedToken })(state, action);

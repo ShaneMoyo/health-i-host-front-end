@@ -10,6 +10,9 @@ export default class Landing extends Component {
             <div class="hero-body">
               <div class="container has-text-centered">
                 <div class="column is-6 is-offset-3"> 
+                  <br/>
+                  <br/>
+                  <br/>
                   <h1 class="animated fadeIn title">
                     Healthihost
                   </h1>
