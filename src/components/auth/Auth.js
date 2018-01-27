@@ -39,8 +39,8 @@ function Auth({ user, signin, signup, error, location, loading }) {
 
 export default withRouter(connect(
   ({ auth, loading, error }) => ({ 
-    error,
     user: auth.user,
+    error,
     loading
   }),
   { signup, signin }
