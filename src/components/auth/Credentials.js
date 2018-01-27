@@ -25,7 +25,7 @@ export default ({ submit, action, allowName = false, loading, error }) => (
           <p class="subtitle has-text-grey">Please login to proceed.</p>
           { allowName && 
             <div class="field">
-              <div class="container">
+              <div class="control">
                 <input class="input is-medium" placeholder="First Name" name="firstName"/>
               </div>
             </div>}

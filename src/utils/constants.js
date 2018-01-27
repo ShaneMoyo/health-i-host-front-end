@@ -7,3 +7,4 @@ export const FETCHED_USER = 'FETHCED_USER';
 export const AUTH_FAILED = 'AUTH_FAILED';
 export const LOGOUT = 'LOGOUT';
 export const API_URL = '/api';
+export const BOOKED_APPOINTMENT = 'BOOKED_APPOINTMENT';
