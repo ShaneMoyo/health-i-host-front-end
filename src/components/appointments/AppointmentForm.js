@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bookAppointment } from './actions';
+import { NavLink } from 'react-router-dom';
+
+const NavBarLink = props => <NavLink {...props} 
+className="nav-link" 
+activeClassName="active"
+/>;
 
 class AppointmentForm extends Component {
 
@@ -123,7 +129,7 @@ class AppointmentForm extends Component {
             { this.state.appoitmentBooked ? 
             <div>
               <h3 class="animated fadeIn is-success">Appointment Booked Succesfully</h3>
-              <div class="animated fadeIn button is-info is-large">Proceed to My Appointments</div>
+              <div class="animated fadeIn button is-info is-large"><NavBarLink exact to="/appointment/me">Proceed to My Appointments</NavBarLink></div>
             </div> :
             <form onSubmit={ event => this.handleBookAppointment(event)}>
                 <div class="field">

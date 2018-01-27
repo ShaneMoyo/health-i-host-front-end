@@ -60,6 +60,10 @@ class Navigation extends Component {
             { user && <a class="navbar-item" onClick={() => this.handleSignOut()}>
             <NavBarLink exact to="/"><span class="tag is-warning">Log out</span></NavBarLink>
             </a> }
+
+            { user && <a class="navbar-item" onClick={() => this.onClickNav()}>
+            <NavBarLink exact to="/appointment/me"><span class="tag is-warning">My Appointments</span></NavBarLink>
+            </a> }
           </div>
         </div>
 

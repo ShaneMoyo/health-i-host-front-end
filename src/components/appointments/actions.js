@@ -10,3 +10,12 @@ export function bookAppointment(appointment){
       .catch(error => dispatch({ type: actions.ERROR , payload: error }));
   }
 }
+
+export function loadMyAppointments(){
+  return dispatch => {
+    dispatch({
+      type: actions.LOAD_APPOINTMENTS,
+      payload: appointmentApi.getMy()
+    });
+  };
+}

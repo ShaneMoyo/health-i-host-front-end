@@ -8,3 +8,4 @@ export const AUTH_FAILED = 'AUTH_FAILED';
 export const LOGOUT = 'LOGOUT';
 export const API_URL = '/api';
 export const BOOKED_APPOINTMENT = 'BOOKED_APPOINTMENT';
+export const LOAD_APPOINTMENTS = 'LOAD_APPOINTMENTS';
