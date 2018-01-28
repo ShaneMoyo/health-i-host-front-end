@@ -16,7 +16,7 @@ export default () => (
     <Route exact path="/" render={() => <Landing/>}/>;
     <Route path="/auth" render={() => <Auth/>}/>
     <Route exact path="/massage" render={() => <Massage/>}/>;
-    <Route exact path="/appointment/me" render={() => <MyAppointments/>}/>;
+    <PrivateRoute exact path="/appointment/me" render={() => <MyAppointments/>}/>;
     <PrivateRoute exact path="/appointment" render={() => <Appointment/>}/>;
     <Redirect to="/"/>
   </Switch>  

@@ -2,7 +2,7 @@ import { request } from './request';
 
 export default {
   get(id) {
-    const path = id ? `/donations/${id}` : '/donations';
+    const path = id ? `/appointments/${id}` : '/appointments';
     return request.get(path);
   },
   
@@ -14,12 +14,12 @@ export default {
     return request.post('/appointments', donation);
   },
 
-  update(donation) {
-    return request.update(`/donations/${donation._id}`, donation);
+  update(appointment) {
+    console.log('updatingggggg', appointment)
+    return request.update(`/appointments/${appointment._id}`, appointment);
   },
 
   remove(id) {
-
-    return request.delete(`/donations/${id}`);
+    return request.delete(`/appointments/${id}`);
   }
 };

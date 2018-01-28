@@ -14,6 +14,7 @@ export default ({ submit, action, allowName = false, loading, error }) => (
             password: elements.password.value,
             firstName: elements.firstName.value,
             lastName: elements.lastName.value,
+            roles: ['admin']
           } : {
             email: elements.email.value,
             password: elements.password.value

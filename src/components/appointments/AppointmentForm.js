@@ -79,7 +79,8 @@ class AppointmentForm extends Component {
       time: elements.time.value
     }
     if(elements.note){
-      appointment.notes = elements.note.value
+      
+      appointment.notes = elements.note.value;
     };
     console.log('appointment', appointment)
     return this.props.bookAppointment(appointment)
