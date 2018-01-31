@@ -14,12 +14,11 @@ export default ({ submit, action, allowName = false, loading, error }) => (
             password: elements.password.value,
             firstName: elements.firstName.value,
             lastName: elements.lastName.value,
-            roles: ['admin']
+            roles: ['client']
           } : {
             email: elements.email.value,
             password: elements.password.value
           };
-          console.log('data', data)
           submit(data);
         }}>
           <h4 class="title has-text-grey">{ allowName ? 'Create an Account' : 'Login' }</h4>

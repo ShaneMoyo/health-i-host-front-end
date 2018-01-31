@@ -20,7 +20,6 @@ class AdminAppointmentItem extends Component{
   }
 
   handleNewNote = value => {
-    console.log('newNote', value)
     this.setState({ newNote: value })
   }
 

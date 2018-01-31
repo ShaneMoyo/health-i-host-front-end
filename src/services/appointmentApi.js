@@ -15,7 +15,6 @@ export default {
   },
 
   update(appointment) {
-    console.log('updatingggggg', appointment)
     return request.update(`/appointments/${appointment._id}`, appointment);
   },
 

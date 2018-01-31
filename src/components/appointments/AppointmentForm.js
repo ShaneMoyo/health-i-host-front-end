@@ -82,7 +82,6 @@ class AppointmentForm extends Component {
       
       appointment.notes = elements.note.value;
     };
-    console.log('appointment', appointment)
     return this.props.bookAppointment(appointment)
       .then(() => {
         this.setState({ appoitmentBooked: !this.state.appoitmentBooked })
