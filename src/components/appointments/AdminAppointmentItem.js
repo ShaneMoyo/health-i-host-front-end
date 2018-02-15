@@ -8,7 +8,8 @@ class AdminAppointmentItem extends Component{
     inputNote: false,
     newNote: '',
     cancel: false,
-    updatingStatus: false
+    updatingStatus: false,
+    status: null,
   }
 
   handleDeleteAppointment = () => {
@@ -38,15 +39,22 @@ class AdminAppointmentItem extends Component{
   }
 
   handleStatusChange = status => {
+    console.log('statuss', status)
+    this.setState({ status: status })
+  }
+
+  handleUpdateStatus = () => {
+    console.log('new Status', this.state.status)
     const update = { ...this.props.appointment }
-    update.fullfilled = status;
+    update.fullfilled = this.state.status;
     return this.props.updateAppointment(update)
     .then(()=> { this.setState({ updatingStatus: false })})
-
   }
   
   render(){
     const { appointment, loading } = this.props;
+    console.log('statussss in render', appointment.fulfilled)
+    console.log('bug hunting', this.state.status)
     let status = appointment.fulfilled ? 'Confirmed' : 'Pending';
     appointment.cancelled ? status = 'Cancelled' : null;
     return(
@@ -76,11 +84,14 @@ class AdminAppointmentItem extends Component{
             <div class="control">
               
                 { this.state.updatingStatus ?
+                <div>
+                <span class="tag is-warning"onClick={() => this.handleUpdateStatus()}>Update</span>
                 <div class="select is-small">
-                  <select name="service" onChange={() => this.handleStatusChange()}>
+                  <select name="service" onChange={({ target }) => this.handleStatusChange(target.value)}>
                     <option value={true}>Confirm</option>
                     <option value={false}>Pending</option>
                   </select>
+                  </div>
                 </div> :
                 <div class="tags has-addons" onClick={() => this.setState({ updatingStatus: true })}>
                 <span class="tag is-warning">Update Status</span>
