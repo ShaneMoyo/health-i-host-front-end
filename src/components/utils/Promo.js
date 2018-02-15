@@ -9,6 +9,7 @@ activeClassName="active"
 class Promo extends Component {
 
   render(){
+    const { header1, header2 } = this.props;
     return(
       <section class="hero is-warning is-bold is-small promo-block">
         <div class="hero-body">
@@ -16,10 +17,10 @@ class Promo extends Component {
           <br/>
           <br/>
             <h1 class="animated fadeIn title">
-              Massage Therapy
+              { header1 }
             </h1>
             <h2 class="animated fadeIn subtitle">
-              A natural, effective way to relieve stress and reduce pain and inflammation.
+              { header2 }
             </h2>
             <div class="field">
             <a class="button is-white is-outlined">
