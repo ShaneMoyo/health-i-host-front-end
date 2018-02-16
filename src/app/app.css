@@ -64,3 +64,10 @@ p {
 .navbar-menu{
   background-color: rgba(255, 255, 255, 0.1);
 }
+
+.mediatile{
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.6),
+      rgba(124, 101, 8, 0.1)
+    ), url('../utils/images/background3.jpg') no-repeat center center ;
+}
