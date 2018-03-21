@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import AppointmentForm from './AppointmentForm'
+import AppointmentForm from './AppointmentForm';
 
 class Appointments extends Component {
   render(){

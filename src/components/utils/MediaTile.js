@@ -6,10 +6,10 @@ class MediaTile extends Component {
     const { paragraph1, paragraph2, header, imgsrc  } = this.props;
     const tileStyle = { 
       background: `linear-gradient(
-        rgba(252, 220, 89, 0.6),
+        rgba(252, 220, 89, 0.8),
         rgba(0, 0, 0, 0.5)
       ), url(${imgsrc}) no-repeat center center`,
-      backgroundWidth: '100%' 
+      backgroundSize: 'cover' 
     };
 
     return(
