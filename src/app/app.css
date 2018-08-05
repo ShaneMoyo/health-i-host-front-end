@@ -32,6 +32,11 @@ p {
   margin: 0 auto;
 }
 
+.home-button {
+  height: 100%;
+  border-radius: 10px;
+}
+
 .hero.is-info {
   background: linear-gradient(
       rgba(255, 255, 255, 0.6),

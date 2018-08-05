@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { signout } from '../auth/actions';
+import logo from '../../utils/images/logo.jpg';
+
 
 const NavBarLink = props => <NavLink {...props} 
   className="nav-link" 
@@ -31,7 +33,7 @@ class Navigation extends Component {
             <div class="navbar-brand">
 
               <a class="navbar-item">
-                <NavBarLink exact to="/"><span class="tag is-outlined">Healthihost</span></NavBarLink>
+                <NavBarLink class=" home-button" exact to="/"><img height="100%" src={logo} /></NavBarLink>
               </a>
           
               {user ? <a class="navbar-item is-transparent">

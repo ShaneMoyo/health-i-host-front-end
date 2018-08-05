@@ -5,7 +5,7 @@ import {
   Redirect
 } from 'react-router-dom';
 import PrivateRoute from './PrivateRoute';
-import Landing from '../components/landing/Landing';
+import Landing from '../components/landing/landing';
 import Massage from '../components/massage/Massage';
 import Minerals from '../components/minerals/Minerals';
 import Movement from '../components/movement/Movement'
